@@ -45,7 +45,7 @@ public class VendingMachine {
         for (Beverage b : this.beverageList) {
             addBeverage(b);
         }
-        System.out.println("Initialized the vending machine.");
+        System.out.println("Initialized the vending machine!");
     }
 
     public void displayMachine() {
