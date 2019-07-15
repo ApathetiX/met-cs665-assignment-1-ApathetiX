@@ -1,8 +1,14 @@
 package edu.bu.met.cs665;
 
+import edu.bu.met.cs665.beverage.Beverage;
+import edu.bu.met.cs665.beverage.coffee_subclasses.Americano;
+import edu.bu.met.cs665.beverage.coffee_subclasses.Espresso;
 import edu.bu.met.cs665.example1.Person;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -31,6 +37,17 @@ public class Main {
     logger.warn("Warn Message!");
     logger.error("Error Message!");
     logger.fatal("Fatal Message!");
+
+    List<Beverage> beverageList = new ArrayList<Beverage>();
+    Beverage espresso = new Espresso("Espresso", 2);
+    Beverage americano = new Americano("Americano", 2);
+    Beverage esp2 = new Espresso("Espresso", 2);
+    beverageList.add(espresso);
+    beverageList.add(americano);
+    beverageList.add(esp2);
+
+    VendingMachine machine = new VendingMachine(beverageList);
+    machine.displayMachine();
 
   }
 

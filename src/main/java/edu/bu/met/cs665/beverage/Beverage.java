@@ -35,11 +35,19 @@ public class Beverage {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return this.size;
     }
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Beverage bev = (Beverage) obj;
+        return (bev.name.equals(this.name) && bev.size == this.size);
     }
 }
