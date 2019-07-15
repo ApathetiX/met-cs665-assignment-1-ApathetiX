@@ -4,7 +4,7 @@ public class Beverage {
     private String name;
     private int size;
 
-    public Beverage(String n, int s) {
+    Beverage(String n, int s) {
         this.name = n;
         this.size = s;
     }
@@ -31,5 +31,15 @@ public class Beverage {
                 "name='" + name + '\'' +
                 ", size=" + size +
                 '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }
