@@ -112,4 +112,25 @@ target/site/checkstyle.html
 mvn -DrepoToken=YOUR-REPO-TOCKEN-ON-COVERALLS  cobertura:cobertura coveralls:report
 ```
 
+#Implementation Description
+```
+This program acts as a program controller for a vending machine.
+This vending machine can take any type of Beverage object (teas, coffee, sodas, etc).
+Once a List<Beverage> is initialized with desired beverages, the vending machine can be initialized.
+
+The Vending Machine uses a Map<Beverage, Integer> to store beverages that exist, and their quantity.
+Via this underlying data stucture, we can remove and add beverages as we please while
+taking into account the current state via its quantity.
+
+The vending machine can support different types of beverages, 
+as long as the future beverage object extends from the base super Beverage class.
+
+The program is run from the main method. First a list of beverage objects must be created and passed
+into the VendingMachine constructor. The machine will then initialize and prompt the user
+to type in the name of the beverage desired. 
+
+If the user would like to add future drink types not related to coffee or tea, the user should create 
+a new subclass for the desired drink type. 
+```
+
 
