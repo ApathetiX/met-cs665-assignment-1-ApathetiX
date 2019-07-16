@@ -112,7 +112,7 @@ target/site/checkstyle.html
 mvn -DrepoToken=YOUR-REPO-TOCKEN-ON-COVERALLS  cobertura:cobertura coveralls:report
 ```
 
-#Implementation Description
+# Implementation Description
 ```
 This program acts as a program controller for a vending machine.
 This vending machine can take any type of Beverage object (teas, coffee, sodas, etc).
